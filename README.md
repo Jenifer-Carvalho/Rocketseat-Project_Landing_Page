@@ -14,8 +14,7 @@ This project was developed with the following technologies:
 - HTML and CSS
 - JavaScript
 - Git and Github
-- Figma
 
 ## 💻 Project
 
-- [Access the finished project here](https://jenifer-c-carvalho.github.io/Jeni-s-projects-page/index.html)
+- [Access the finished project here](https://jenifer-carvalho.github.io/Rocketseat-Project_Landing_Page/)
