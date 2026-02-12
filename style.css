@@ -1,0 +1,207 @@
+/* General rule */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+/* Root element - Dark mode*/
+:root {
+  --text-color: white;
+  --bg-url: url("IMG/bg_mobile_dark.jpg");
+  --border-color: rgba(255, 255, 255, 0.5);
+  --button-color: rgba(255, 255, 255, 0.1);
+  --button-color-hover: rgba(255, 255, 255, 0.3);
+  --social-icons-color: rgba(255, 255, 255, 0.2);
+  --mode-button: url("ASSETS/moon.svg");
+}
+
+/* Stylling the light mode */
+.light {
+  --text-color: black;
+  --bg-url: url("IMG/bg_mobile_light.jpg");
+  --border-color: rgba(0, 0, 0, 0.5);
+  --button-color: rgba(0, 0, 0, 0.05);
+  --button-color-hover: rgba(0, 0, 0, 0.09);
+  --social-icons-color: rgba(0, 0, 0, 0.2);
+  --mode-button: url("ASSETS/sun.svg");
+}
+
+.light #button_mode button {
+  animation: slide-in 0.6s forwards;
+}
+
+/* Stylling body of the page*/
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
+}
+
+body * {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--text-color);
+}
+
+/* Stylling the container */
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 10px auto 0;
+  padding: 0 24px;
+}
+
+/* Stylling the user's profile */
+img {
+  display: flex;
+  justify-content: center;
+  width: 117px;
+  margin: 24px auto;
+  border-radius: 50%;
+  border: solid 2px var(--border-color);
+}
+
+#profile {
+  text-align: center;
+  padding: 10px;
+}
+
+#profile p {
+  text-align: justify;
+  font-weight: 500px;
+  line-height: 24px;
+  margin: 10px auto;
+}
+
+/* Stylling the dark and light mode buton */
+#button_mode {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#button_mode button {
+  width: 32px;
+  height: 32px;
+  background: white var(--mode-button) no-repeat center;
+  background-size: 20px 20px;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  animation: slide-out 0.6s;
+}
+
+#button_mode span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--button-color);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+}
+
+/*button animatio*/
+#button_mode button:hover {
+  outline: 8px solid var(--button-color-hover);
+}
+
+/* Styling unordered list of project links */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--button-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500px;
+  transition: background 0.2s;
+}
+
+/* List animation */
+ul li a:hover {
+  background: var(--button-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* Styllig social media icons */
+#social_media {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 36px;
+}
+
+#social_media a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+/* Social media icons animation */
+#social_media a:hover {
+  background: var(--social-icons-color);
+}
+
+/*Stylling the footer */
+footer {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive layout */
+
+@media (min-widht: 700px) {
+  :root {
+    --bg-url: url("IMG/bg_desktop_dark.jpg");
+  }
+
+  .light {
+    --bg-url: url("IMG/bg_desktop_light.jpg");
+  }
+}
+
+/* Animation */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
