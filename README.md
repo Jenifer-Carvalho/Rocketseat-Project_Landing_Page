@@ -18,4 +18,4 @@ This project was developed with the following technologies:
 
 ## 💻 Project
 
-- [Access the finished project here](https://jenifer-c-carvalho.github.io/Jeni-s-projects-page/index.html)
+- [Access the finished project here](https://jenifer-carvalho.github.io/Rocketseat-Project_Landing_Page/)
